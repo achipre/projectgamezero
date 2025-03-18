@@ -4,65 +4,64 @@
 en_suelo = place_meeting(x, y + 1, obj_block);
 
 // --- Controles de movimiento horizontal ---
-var _right = keyboard_check(vk_right);
-var _left = keyboard_check(vk_left);
-var _mov_horizontal = _right - _left;
-velx = _mov_horizontal * spd;
+var _key_right = keyboard_check(vk_right);
+var _key_left = keyboard_check(vk_left);
+var _key_jump = keyboard_check_pressed(vk_space);
 
-if(_left)
+
+var _mov_horizontal = _key_right - _key_left;
+
+velocidad_x = _mov_horizontal * spd;
+
+if (_mov_horizontal != 0)
 {
-	image_xscale = -1
+	image_xscale = _mov_horizontal;
+	sprite_index = spr_player_walk;
 }
-
-
+else
+{
+	sprite_index = spr_player_idle;
+}
 // --- Gravedad ---
 if (!en_suelo) {
-    vely += grav;
+    velocidad_y += grav;
+	show_debug_message("En Aire");
 } else {
-    vely = 0;
-	sprite_index = spr_player_idle;
+    velocidad_y = 0;
+	show_debug_message("En Suelo");
 }
 
 // --- Salto ---
-if (keyboard_check_pressed(vk_space) && en_suelo) {
-    vely = -jump_force;
-	sprite_index = spr_player_jump
+if (_key_jump && en_suelo) {
+    velocidad_y += jump_force;
+	sprite_index = spr_player_jump;
 }
 
 // --- Colisión horizontal ---
-if (place_meeting(x + velx, y, obj_block)) {
-    while (!place_meeting(x + sign(velx), y, obj_block)) {
-        x += sign(velx);
+var _sub_pixel = .5
+if (place_meeting(x + velocidad_x, y, obj_block)) {
+	var _pixel_check = _sub_pixel * sign(velocidad_x)
+    while (!place_meeting(x + _pixel_check, y, obj_block)) {
+		
+        x += _pixel_check;
     }
-    velx = 0;
+    velocidad_x = 0;
 }
 
 // --- Aplicar el movimiento horizontal ---
-x += velx;
+x += velocidad_x;
 
 // --- Colisión vertical ---
-if (place_meeting(x, y + vely, obj_block)) {
-    while (!place_meeting(x, y + sign(vely), obj_block)) {
-        y += sign(vely);
+
+if (place_meeting(x , y + velocidad_y, obj_block)) {
+	
+	var _pixel_check = _sub_pixel * sign(velocidad_y);
+	
+    while (!place_meeting(x, y + _pixel_check, obj_block)) {
+        y += _pixel_check;
     }
-    vely = 0;
+    velocidad_y = 0;
 }
 
 // --- Aplicar el movimiento vertical ---
-y += vely;
-
-// Agregar este código al evento Step de obj_player después del código de movimiento
-
-// Verificar si el jugador está fuera de la vista de la cámara
-var cam = view_camera[0];
-var cam_x = camera_get_view_x(cam);
-var cam_y = camera_get_view_y(cam);
-var cam_w = camera_get_view_width(cam);
-var cam_h = camera_get_view_height(cam);
-
-// Si el jugador está completamente fuera de los límites de la cámara
-if (x + 24 < cam_x - sprite_width || x + 24 > cam_x + cam_w + sprite_width || 
-    y < cam_y - sprite_height || y > cam_y + cam_h + sprite_height) {
-    // Destruir el jugador
-    instance_destroy();
-}
+y += velocidad_y;
