@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_left",
+  "%Name":"obj_block_direction",
   "eventList":[],
   "managed":true,
-  "name":"obj_block_left",
+  "name":"obj_block_direction",
   "overriddenProperties":[],
   "parent":{
     "name":"Objetos",
     "path":"folders/Objetos.yy",
   },
-  "parentObjectId":{
-    "name":"obj_block",
-    "path":"objects/obj_block/obj_block.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_block_left",
-    "path":"sprites/spr_block_left/spr_block_left.yy",
+    "name":"spr_block",
+    "path":"sprites/spr_block/spr_block.yy",
   },
   "spriteMaskId":null,
   "visible":false,

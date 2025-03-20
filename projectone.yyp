@@ -38,6 +38,7 @@
   "name":"projectone",
   "resources":[
     {"id":{"name":"obj_barrel","path":"objects/obj_barrel/obj_barrel.yy",},},
+    {"id":{"name":"obj_block_direction","path":"objects/obj_block_direction/obj_block_direction.yy",},},
     {"id":{"name":"obj_block_left","path":"objects/obj_block_left/obj_block_left.yy",},},
     {"id":{"name":"obj_block_right","path":"objects/obj_block_right/obj_block_right.yy",},},
     {"id":{"name":"obj_block","path":"objects/obj_block/obj_block.yy",},},
