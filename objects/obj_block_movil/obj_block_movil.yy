@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block",
+  "%Name":"obj_block_movil",
   "eventList":[],
   "managed":true,
-  "name":"obj_block",
+  "name":"obj_block_movil",
   "overriddenProperties":[],
   "parent":{
-    "name":"floor and wall",
-    "path":"folders/Objetos/floor and wall.yy",
+    "name":"platforms",
+    "path":"folders/Objetos/platforms.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_block",
-    "path":"sprites/spr_block/spr_block.yy",
+    "name":"spr_block_movil",
+    "path":"sprites/spr_block_movil/spr_block_movil.yy",
   },
   "spriteMaskId":null,
   "visible":false,

@@ -1,6 +1,7 @@
 // Crear evento (Create Event)
 // Variables de movimiento
 // Guardar la posición inicial
+depth = -1000;
 start_x = x;
 start_y = y;
 velocidad_x = 0;      // Velocidad horizontal

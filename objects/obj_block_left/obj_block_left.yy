@@ -6,12 +6,12 @@
   "name":"obj_block_left",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"floor and wall",
+    "path":"folders/Objetos/floor and wall.yy",
   },
   "parentObjectId":{
-    "name":"obj_block",
-    "path":"objects/obj_block/obj_block.yy",
+    "name":"obj_block_one_way",
+    "path":"objects/obj_block_one_way/obj_block_one_way.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

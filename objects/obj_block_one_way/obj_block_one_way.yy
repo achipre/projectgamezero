@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_block_direction",
+  "%Name":"obj_block_one_way",
   "eventList":[],
   "managed":true,
-  "name":"obj_block_direction",
+  "name":"obj_block_one_way",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"platforms",
+    "path":"folders/Objetos/platforms.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_block",
-    "path":"sprites/spr_block/spr_block.yy",
+    "name":"spr_block_one_way",
+    "path":"sprites/spr_block_one_way/spr_block_one_way.yy",
   },
   "spriteMaskId":null,
   "visible":false,
