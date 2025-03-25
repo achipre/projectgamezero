@@ -10,8 +10,8 @@
     "path":"folders/Objetos/floor and wall.yy",
   },
   "parentObjectId":{
-    "name":"obj_block_one_way",
-    "path":"objects/obj_block_one_way/obj_block_one_way.yy",
+    "name":"obj_block",
+    "path":"objects/obj_block/obj_block.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
