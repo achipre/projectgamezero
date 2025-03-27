@@ -4,7 +4,6 @@ function scr_collistion_v(){
 	var _sub_pixel = .5
 	if (place_meeting(x , y + velocidad_y, obj_block)) 
 	{
-	
 		var _pixel_check = _sub_pixel * sign(velocidad_y);
 	
 	    while (!place_meeting(x, y + _pixel_check, obj_block)) {
@@ -13,5 +12,24 @@ function scr_collistion_v(){
 	    velocidad_y = 0;
 	}
 	
-
+	/*
+	if (place_meeting(x , y + velocidad_y, obj_block_left) && velocidad_y > 0) 
+	{
+		var _pixel_check = _sub_pixel * sign(velocidad_y);
+	
+	    while (!place_meeting(x, y + _pixel_check, obj_block_left)) {
+	        y += _pixel_check;
+	    }
+	    velocidad_y = 0;
+	}
+	if (place_meeting(x , y + velocidad_y, obj_block_right) && velocidad_y > 0) 
+	{
+		var _pixel_check = _sub_pixel * sign(velocidad_y);
+	
+	    while (!place_meeting(x, y + _pixel_check, obj_block_right)) {
+	        y += _pixel_check;
+	    }
+	    velocidad_y = 0;
+	}
+	*/
 }

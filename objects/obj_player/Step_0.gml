@@ -21,6 +21,21 @@ scr_collistion_h()
 x += velocidad_x
 
 scr_collistion_v()
-y += velocidad_y
+
+var _platform = place_meeting(x , y + velocidad_y, obj_block_left);
+var _sub_pixel = .5;
+if (_platform && velocidad_y > 0) 
+{
+	var _pixel_check = _sub_pixel * sign(velocidad_y);
+	
+	while (!place_meeting(x, y + _pixel_check, obj_block_left)) {
+	    y += _pixel_check;
+	}
+	velocidad_y = 0;
+}
+
+y += velocidad_y;
+
+src_player_jump_animation()
 
 scr_restar_player()

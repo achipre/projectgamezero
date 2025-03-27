@@ -23,3 +23,4 @@ coyote_time = 0; // Contador de Coyote Time
 
 // Límite de caída antes de ser destruido
 fall_limit = room_height + 100; // Ajusta según necesites
+
