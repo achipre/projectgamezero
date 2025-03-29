@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_restar_player",
+  "%Name":"scr_inputget",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_restar_player",
+  "name":"scr_inputget",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"scrip_inputs",
+    "path":"folders/Scripts/scrip_inputs.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

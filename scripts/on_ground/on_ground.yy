@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_jump",
+  "%Name":"on_ground",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_jump",
+  "name":"on_ground",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

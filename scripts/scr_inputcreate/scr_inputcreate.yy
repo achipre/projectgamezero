@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"src_player_jump_animation",
+  "%Name":"scr_inputcreate",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"src_player_jump_animation",
+  "name":"scr_inputcreate",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"scrip_inputs",
+    "path":"folders/Scripts/scrip_inputs.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
